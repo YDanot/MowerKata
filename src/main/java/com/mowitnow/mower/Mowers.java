@@ -21,4 +21,7 @@ public class Mowers {
         return mower.instructions();
     }
 
+    public void start() {
+        mowers.forEach(Mower::start);
+    }
 }

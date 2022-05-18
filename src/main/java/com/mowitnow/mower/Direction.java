@@ -4,15 +4,20 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 public enum Direction {
-    NORTH("N"),
-    WEST("W"),
-    EAST("E"),
-    SOUTH("S");
+
+    NORTH("N", "W", "E"),
+    WEST("W", "S", "N"),
+    EAST("E", "N", "S"),
+    SOUTH("S", "E", "W");
 
     private final String command;
+    private final String left;
+    private final String right;
 
-    Direction(String command) {
+    Direction(String command, String left, String right) {
         this.command = command;
+        this.left = left;
+        this.right = right;
     }
 
     public static Optional<Direction> of(String command) {
@@ -23,5 +28,13 @@ public enum Direction {
 
     public String getCommand() {
         return command;
+    }
+
+    public Direction getLeft() {
+        return of(left).orElseThrow();
+    }
+
+    public Direction getRight() {
+        return of(right).orElseThrow();
     }
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Consumer;
 
 public class Instructions {
 
@@ -30,4 +31,7 @@ public class Instructions {
         return Objects.hash(instructions);
     }
 
+    public void launchActions(Consumer<Instruction> doAction) {
+        instructions.forEach(doAction);
+    }
 }

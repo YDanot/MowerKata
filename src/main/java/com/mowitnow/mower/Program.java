@@ -9,4 +9,8 @@ public record Program(GardenDimension dimensionGarden, Mowers mowers) {
     public Instructions getMowerInstructions(int index) {
         return mowers.getInstructionBy(index);
     }
+
+    public void start() {
+        mowers.start();
+    }
 }

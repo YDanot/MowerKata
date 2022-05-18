@@ -16,9 +16,9 @@ public class PositionParserTest {
         String originPositionRaw = "0 0 N";
         Position initialPosition = new PositionParser().parse(originPositionRaw);
 
-        assertThat(initialPosition.x()).isEqualTo(0);
-        assertThat(initialPosition.x()).isEqualTo(0);
-        assertThat(initialPosition.direction()).isEqualTo(NORTH);
+        assertThat(initialPosition.getX()).isEqualTo(0);
+        assertThat(initialPosition.getY()).isEqualTo(0);
+        assertThat(initialPosition.getDirection()).isEqualTo(NORTH);
     }
 
     @ParameterizedTest
