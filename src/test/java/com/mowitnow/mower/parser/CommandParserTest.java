@@ -1,5 +1,6 @@
 package com.mowitnow.mower.parser;
 
+import com.mowitnow.mower.Command;
 import com.mowitnow.mower.exception.CommandUnknownException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -16,5 +17,11 @@ public class CommandParserTest {
                 () -> new CommandParser().parse(commandRaw), "CommandUnknownException was expected ");
 
         assertThat(commandUnknownException.getMessage()).isEqualTo("Command unknown exception " + commandRaw);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"A", "D", "G"})
+    void can_parse_valid_command(String commandRaw) throws CommandUnknownException {
+        assertThat(Command.values()).contains(new CommandParser().parse(commandRaw));
     }
 }
