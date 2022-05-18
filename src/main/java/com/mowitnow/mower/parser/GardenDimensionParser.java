@@ -1,4 +1,7 @@
-package com.mowitnow.mower;
+package com.mowitnow.mower.parser;
+
+import com.mowitnow.mower.GardenDimension;
+import com.mowitnow.mower.exception.InvalidInitialLimitDimensionException;
 
 public class GardenDimensionParser {
 

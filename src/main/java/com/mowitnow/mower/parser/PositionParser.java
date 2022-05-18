@@ -1,4 +1,8 @@
-package com.mowitnow.mower;
+package com.mowitnow.mower.parser;
+
+import com.mowitnow.mower.Direction;
+import com.mowitnow.mower.Position;
+import com.mowitnow.mower.exception.IllegalPositionException;
 
 import java.util.Optional;
 

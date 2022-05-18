@@ -1,4 +1,4 @@
-package com.mowitnow.mower;
+package com.mowitnow.mower.exception;
 
 public class IllegalPositionException extends RuntimeException {
 

@@ -1,5 +1,7 @@
 package com.mowitnow.mower;
 
+import com.mowitnow.mower.exception.InvalidInitialLimitDimensionException;
+import com.mowitnow.mower.parser.GardenDimensionParser;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

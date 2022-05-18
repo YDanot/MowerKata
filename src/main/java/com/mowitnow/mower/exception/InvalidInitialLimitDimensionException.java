@@ -1,4 +1,4 @@
-package com.mowitnow.mower;
+package com.mowitnow.mower.exception;
 
 public class InvalidInitialLimitDimensionException extends RuntimeException {
     public InvalidInitialLimitDimensionException(String message, Throwable throwable) {
