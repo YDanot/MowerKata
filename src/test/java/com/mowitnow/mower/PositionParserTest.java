@@ -1,6 +1,7 @@
 package com.mowitnow.mower;
 import org.junit.jupiter.api.Test;
 
+import static com.mowitnow.mower.Direction.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PositionParserTest {
@@ -12,6 +13,6 @@ public class PositionParserTest {
 
         assertThat(initialPosition.x()).isEqualTo(0);
         assertThat(initialPosition.x()).isEqualTo(0);
-        assertThat(initialPosition.direction()).isEqualTo("N");
+        assertThat(initialPosition.direction()).isEqualTo(NORTH);
     }
 }
