@@ -1,7 +1,5 @@
 package com.mowitnow.mower;
 
-import static com.mowitnow.mower.Direction.*;
-
 public record MowerMovement(Position position) {
 
     public void doAction(Instruction instruction) {
@@ -16,14 +14,11 @@ public record MowerMovement(Position position) {
     }
 
     private void moveToDesiredDirection(Direction direction) {
-        if (direction == NORTH) {
-            position.setY(position.getY() + 1);
-        } else if (direction == EAST) {
-            position.setX(position.getX() + 1);
-        } else if (direction == SOUTH) {
-            position.setY(position.getY() - 1);
-        } else if (direction == WEST) {
-            position.setX(position.getX() - 1);
+        switch (direction) {
+            case NORTH -> position.setY(position.getY() + 1);
+            case EAST -> position.setX(position.getX() + 1);
+            case SOUTH -> position.setY(position.getY() - 1);
+            case WEST -> position.setX(position.getX() - 1);
         }
     }
 
