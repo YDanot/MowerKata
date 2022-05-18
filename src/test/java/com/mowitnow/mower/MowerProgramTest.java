@@ -22,6 +22,7 @@ public class MowerProgramTest {
     @Test
     void move_all_mowers_to_specific_position() {
         program.start();
+
         assertThat(program.getMowerPosition(0)).isEqualTo(new Position(1, 3, NORTH));
         assertThat(program.getMowerPosition(1)).isEqualTo(new Position(5, 1, EAST));
     }

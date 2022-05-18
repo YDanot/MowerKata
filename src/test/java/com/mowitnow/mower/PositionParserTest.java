@@ -14,6 +14,7 @@ public class PositionParserTest {
     @Test
     void parse_valid_position_from_origin() throws IllegalPositionException {
         String originPositionRaw = "0 0 N";
+
         Position initialPosition = new PositionParser().parse(originPositionRaw);
 
         assertThat(initialPosition.getX()).isEqualTo(0);
@@ -30,6 +31,7 @@ public class PositionParserTest {
     @Test
     void must_raise_illegal_position_exception_when_direction_is_invalid() {
         String originPositionRaw = "0 0 0";
+
         IllegalPositionException illegalPositionException = assertThrows(IllegalPositionException.class,
                 () -> new PositionParser().parse(originPositionRaw), "IllegalPositionException was expected");
 

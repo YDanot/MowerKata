@@ -27,12 +27,14 @@ public class ProgramParserTest {
     @Test
     void must_initialize_mower_coordinate() throws InvalidInitialLimitDimensionException, IllegalPositionException {
         Program program = new ProgramParser().parse(fileContent);
+
         assertThat(program.dimensionGarden()).isEqualTo(new GardenDimension(5, 5));
     }
 
     @Test
     void must_initialize_position() throws InvalidInitialLimitDimensionException, IllegalPositionException {
         Program program = new ProgramParser().parse(fileContent);
+
         assertThat(program.getMowerPosition(0)).isEqualTo(new Position(1, 2, NORTH));
     }
 

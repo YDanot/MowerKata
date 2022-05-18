@@ -14,6 +14,7 @@ public class GardenDimensionTest {
     @Test
     void parse_valid_garden_limit_dimension() throws InvalidInitialLimitDimensionException {
         String dimensionRaw = "5 5";
+
         GardenDimension dimensionGarden = new GardenDimensionParser().parse(dimensionRaw);
 
         assertThat(dimensionGarden.limitX()).isEqualTo(5);
