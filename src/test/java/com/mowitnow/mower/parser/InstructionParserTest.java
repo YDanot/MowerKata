@@ -1,14 +1,14 @@
 package com.mowitnow.mower.parser;
 
-import com.mowitnow.mower.Command;
 import com.mowitnow.mower.exception.CommandUnknownException;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class CommandParserTest {
+public class InstructionParserTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"B", "C", "F"})
@@ -21,7 +21,8 @@ public class CommandParserTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"A", "D", "G"})
-    void can_parse_valid_command(String commandRaw) throws CommandUnknownException {
-        assertThat(Instruction.values()).contains(new CommandParser().parse(commandRaw));
+    void parse_valid_command(String commandRaw) throws CommandUnknownException {
+        Assertions.assertThat(Instruction.values()).contains(new CommandParser().parse(commandRaw));
     }
 }
+
