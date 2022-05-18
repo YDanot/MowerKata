@@ -1,5 +1,6 @@
 package com.mowitnow.mower.parser;
 
+import com.mowitnow.mower.Instruction;
 import com.mowitnow.mower.exception.CommandUnknownException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
