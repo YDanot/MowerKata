@@ -1,4 +1,5 @@
 package com.mowitnow.mower;
+// probablement une erreur de package ce test devrait être dans com.mowitnow.mower.parser
 import com.mowitnow.mower.exception.IllegalPositionException;
 import com.mowitnow.mower.parser.PositionParser;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class PositionParserTest {
 
     @Test
+    // ce test est très bien, toutes les données nécessaires à sa compréhension sont accessible directement
+    // sans avoir à ouvrir un autre fichier
     void parse_valid_position_from_origin() throws IllegalPositionException {
         String originPositionRaw = "0 0 N";
 

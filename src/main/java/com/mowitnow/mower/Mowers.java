@@ -3,6 +3,7 @@ package com.mowitnow.mower;
 import java.util.ArrayList;
 import java.util.List;
 
+// record c'est mieux pour ce genre de classe conteneurs
 public class Mowers {
 
     private final List<Mower> mowers = new ArrayList<>();

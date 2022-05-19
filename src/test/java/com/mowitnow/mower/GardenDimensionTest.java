@@ -9,6 +9,13 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/*
+La classe GardenDimension est juste un conteneur de 2 entier il n'y a aucune logique métier,
+je ne vois pas ce qu'on peut tester
+ici tu testes GardenDimenstionParser et pas GardenDimension
+si tu valides que les dimension sont correct dans le constructeur de GardenDimension,
+là tu vas pouvoir tester quelque chose
+ */
 public class GardenDimensionTest {
 
     @Test

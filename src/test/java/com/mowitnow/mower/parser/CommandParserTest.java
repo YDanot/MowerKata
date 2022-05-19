@@ -8,6 +8,9 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/*
+Ce test et la classe com.mowitnow.mower.Command sont à supprimer
+ */
 public class CommandParserTest {
 
     @ParameterizedTest

@@ -2,9 +2,15 @@ package com.mowitnow.mower;
 
 import java.util.Objects;
 
+/*
+Pour le coup un record serait mieux ici
+
+ */
 public final class Position {
     private int x;
     private int y;
+    // il y a un problème de design là, la position ne doit pas être composé d'une direction
+    // C'est le mower qui a une direction pas la position
     private Direction direction;
 
     public Position(int x, int y, Direction direction) {

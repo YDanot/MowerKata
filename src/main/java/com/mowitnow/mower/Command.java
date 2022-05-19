@@ -3,6 +3,9 @@ package com.mowitnow.mower;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+/*
+Cet enum est le même que com.mowitnow.mower.Instruction
+ */
 public enum Command {
     LEFT("G"),
     RIGHT("D"),

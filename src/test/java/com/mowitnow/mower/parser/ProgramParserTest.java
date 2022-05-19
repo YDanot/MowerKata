@@ -28,6 +28,9 @@ public class ProgramParserTest {
     void must_initialize_mower_coordinate() throws InvalidInitialLimitDimensionException, IllegalPositionException {
         Program program = new ProgramParser().parse(fileContent);
 
+        //difficile de comprendre ici pourquoi ton test devrait passer
+        // il faut aller ouvrir le fichier etc...
+        // tu devrais plutôt écrire en dur la configuration dans ton test pour plus de clarter
         assertThat(program.dimensionGarden()).isEqualTo(new GardenDimension(5, 5));
     }
 
@@ -35,6 +38,9 @@ public class ProgramParserTest {
     void must_initialize_position() throws InvalidInitialLimitDimensionException, IllegalPositionException {
         Program program = new ProgramParser().parse(fileContent);
 
+        //difficile de comprendre ici pourquoi ton test devrait passer
+        // il faut aller ouvrir le fichier etc...
+        // tu devrais plutôt écrire en dur la liste d'instruction dans ton test pour plus de clarter
         assertThat(program.getMowerPosition(0)).isEqualTo(new Position(1, 2, NORTH));
     }
 

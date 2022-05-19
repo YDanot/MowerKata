@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
+// record c'est mieux pour ce genre de classe conteneurs
 public class Instructions {
 
     private final List<Instruction> instructions = new ArrayList<>();

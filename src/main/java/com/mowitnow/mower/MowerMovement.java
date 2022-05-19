@@ -1,5 +1,10 @@
 package com.mowitnow.mower;
 
+/*
+MowerMovement pourquoi pas mais pourquoi un record ?
+et pourquoi position en tant qu'attribut ?
+Il serait plus clair de mettre directement le mower en tant qu'attribut dans ce cas là
+ */
 public record MowerMovement(Position position) {
 
     public void doAction(Instruction instruction) {

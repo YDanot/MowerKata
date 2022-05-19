@@ -14,6 +14,7 @@ public class MowerProgramTest {
     private Program program;
 
     @BeforeEach
+    // tu n'as qu'un test cette annotation est inutile
     void setUp() throws Exception {
         String fileContent = getContent("program.command", MowerProgramTest.class);
         program = new ProgramParser().parse(fileContent);
@@ -22,7 +23,7 @@ public class MowerProgramTest {
     @Test
     void move_all_mowers_to_specific_position() {
         program.start();
-
+        // pour comprendre le test on est obligé de se référer au contenu du fichier c'est dommage
         assertThat(program.getMowerPosition(0)).isEqualTo(new Position(1, 3, NORTH));
         assertThat(program.getMowerPosition(1)).isEqualTo(new Position(5, 1, EAST));
     }

@@ -3,6 +3,9 @@ package com.mowitnow.mower;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+/*
+Même commentaire que pour #com.mowitnow.mower.Instruction pour la représentation et le model
+ */
 public enum Direction {
 
     NORTH("N", "W", "E"),
